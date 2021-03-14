@@ -12,25 +12,28 @@ public class Tour {
 
     public Tour(int id, List<Etapa> etapas, List<Equipo> equipos) {
         this.id = id;
-        this.etapas = etapas;
-        this.equipos = equipos;
+        if(etapas.size()==21){
+            this.etapas = etapas;
+        }
+        else{
+            System.out.println("No un numero diferente a 21 etapas");
+        }
+        if(equipos.size()<=5 && equipos.size()>=1) {
+            this.equipos = equipos;
+        }
+        else{
+            System.out.println("No puedes tener mas de 5 equipos");
+        }
     }
 
     public void mostrarEquipos(){
-        if(equipos.size()<=5) {
             System.out.println("Equipos participantes");
             System.out.println("---------------------------");
             for (Equipo e : equipos) {
                 e.mostrarInfo();
             }
-        }
-        else{
-            System.out.println("Hay más de 5 equipos registrados, eso no esta permitido");
-        }
     }
-
     public void mostrarResultados(Etapa e) {
-        if (etapas.size() <= 21) {
             for (Etapa et : etapas) {
                 if (et==e){
                     System.out.println(" Resultados ");
@@ -38,9 +41,7 @@ public class Tour {
                     System.out.println(et.getResultado());
                     break;
                 }
-            }
-            System.out.println("Etapa no encontrada");
-        }
+    }
     }
     public void mostrarCorredores(Equipo e){
         for(Equipo eq:equipos) {
@@ -49,9 +50,7 @@ public class Tour {
                break;
         }
      }
-        System.out.println("Equipo no encontrado");
     }
-
     public void mostrarTabla(){
         List<Integer> mejoresPuntuaciones;
         mejoresPuntuaciones=new ArrayList<>();

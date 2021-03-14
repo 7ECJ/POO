@@ -2,14 +2,26 @@ package taller.dispensador.dominio;
 
  class Producto {
     private int id, cantidad;
-    private String fabricante, nombre;
+    private String nombre;
     private float precio;
 
-    public int getId() {
+     public Producto(int id, int cantidad, String nombre, float precio) {
+         this.id = id;
+         if(cantidad<=8) {
+             this.cantidad = cantidad;
+         }
+         else{
+             System.out.println("No puedes tener mas de 8 unidades de un producto");
+         }
+         this.nombre = nombre;
+         this.precio = precio;
+     }
+
+     public int getId() {
         return this.id;
     }
 
-    public void setCantidad(int cantidad) {
+    protected void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 

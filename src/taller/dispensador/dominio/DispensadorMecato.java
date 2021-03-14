@@ -6,8 +6,20 @@ import java.util.List;
 public class DispensadorMecato {
     private int id;
     private String fabricante;
-    private List<Producto> productos=new ArrayList<>();
+    private List<Producto> productos;
     private float saldo;
+
+    public DispensadorMecato(int id, String fabricante, List<Producto> productos, float saldo) {
+        this.id = id;
+        this.fabricante = fabricante;
+        if(productos.size()<=10) {
+            this.productos = productos;
+        }
+        else{
+            System.out.println("No puedes tener mas de 10 productos");
+        }
+        this.saldo = saldo;
+    }
 
     public String consultarNombreProducto(int id){
         for (Producto p:productos) {
