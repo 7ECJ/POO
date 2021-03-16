@@ -1,5 +1,6 @@
 package taller.leTourDeFrance.dominio;
 
+import java.util.ArrayList;
 import java.util.List;
 
 class Equipo {
@@ -20,17 +21,15 @@ class Equipo {
         this.tour=tour;
     }
 
-    public void mostrarCorredores(){
+    public List<String> mostrarCorredores(){
+        List<String> infoCorredores=new ArrayList<>();
         for(Corredor c: corredores){
-            System.out.println("Nombre: "+c.getNombre());
-            System.out.println("Cedula: "+c.getCedula());
-            System.out.println("Edad: "+c.getEdad());
-            System.out.println("---------------------------------");
+            infoCorredores.add("Nombre: "+c.getNombre()+ " Cedula: "+ c.getCedula()+ " Edad: "+ c.getEdad()+"\n---------------------------");
         }
+        return infoCorredores;
     }
-    public void mostrarInfo(){
-        System.out.println("id: "+id);
-        System.out.println("Nombre: "+nombre);
+    public String mostrarInfo(){
+        return("ID: "+id+ "Nombre: "+ nombre);
     }
     public String getNombre(){
 

@@ -223,7 +223,7 @@
 											"top": 85,
 											"width": 331.35400390625,
 											"height": 13,
-											"text": "+mostrarEquipos()",
+											"text": "+mostrarEquipos(): List<String>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -240,7 +240,7 @@
 											"top": 100,
 											"width": 331.35400390625,
 											"height": 13,
-											"text": "+mostrarResultados(e: Etapa)",
+											"text": "+mostrarResultados(e: Etapa): String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -257,7 +257,7 @@
 											"top": 115,
 											"width": 331.35400390625,
 											"height": 13,
-											"text": "+mostrarCorredores(e: Equipo)",
+											"text": "+mostrarCorredores(e: Equipo): List<String>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -274,7 +274,7 @@
 											"top": 130,
 											"width": 331.35400390625,
 											"height": 13,
-											"text": "+mostrarTabla()",
+											"text": "+mostrarTabla(): List<Integer>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1336,7 +1336,7 @@
 											"top": 316,
 											"width": 405.716796875,
 											"height": 13,
-											"text": "+mostrarCorredores()",
+											"text": "+mostrarCorredores(): List<String>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1406,7 +1406,7 @@
 											"top": 346,
 											"width": 405.716796875,
 											"height": 13,
-											"text": "+mostrarInfo()",
+											"text": "+mostrarInfo(): String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2375,7 +2375,18 @@
 							"_parent": {
 								"$ref": "AAAAAAF4Gds6Qv2Q/68="
 							},
-							"name": "mostrarEquipos"
+							"name": "mostrarEquipos",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4OVXbL6VCvQU=",
+									"_parent": {
+										"$ref": "AAAAAAF4GhC6TQOWOfQ="
+									},
+									"type": "List<String>",
+									"direction": "return"
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -2395,6 +2406,15 @@
 									"type": {
 										"$ref": "AAAAAAF4GduBDv26GHs="
 									}
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4OVX5JKWWzWg=",
+									"_parent": {
+										"$ref": "AAAAAAF4GhThlQP6qPE="
+									},
+									"type": "String",
+									"direction": "return"
 								}
 							]
 						},
@@ -2416,6 +2436,15 @@
 									"type": {
 										"$ref": "AAAAAAF4Gduxif4Ouec="
 									}
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4OVZBGKYFaN0=",
+									"_parent": {
+										"$ref": "AAAAAAF4GhWxWwQtHTQ="
+									},
+									"type": "List<String>",
+									"direction": "return"
 								}
 							]
 						},
@@ -2425,7 +2454,18 @@
 							"_parent": {
 								"$ref": "AAAAAAF4Gds6Qv2Q/68="
 							},
-							"name": "mostrarTabla"
+							"name": "mostrarTabla",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4OVZyh6ZZMbQ=",
+									"_parent": {
+										"$ref": "AAAAAAF4GhdSnAWSl54="
+									},
+									"type": "List<Integer>",
+									"direction": "return"
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -3020,7 +3060,18 @@
 							"_parent": {
 								"$ref": "AAAAAAF4Gduxif4Ouec="
 							},
-							"name": "mostrarCorredores"
+							"name": "mostrarCorredores",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4OVcqNKbIyVI=",
+									"_parent": {
+										"$ref": "AAAAAAF4Gh6ZwQ6dfBI="
+									},
+									"type": "List<String>",
+									"direction": "return"
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -3074,7 +3125,18 @@
 							"_parent": {
 								"$ref": "AAAAAAF4Gduxif4Ouec="
 							},
-							"name": "mostrarInfo"
+							"name": "mostrarInfo",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4OVeSAKccsM0=",
+									"_parent": {
+										"$ref": "AAAAAAF4MU/M3ilRYHY="
+									},
+									"type": "String",
+									"direction": "return"
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",

@@ -21,21 +21,11 @@ public class DispensadorMecato {
         this.saldo = saldo;
     }
 
-    public String consultarNombreProducto(int id){
-        for (Producto p:productos) {
-            if (p.getId()==id) {
-                return (p.getNombre());
-            }
-        }
-        return("Producto no encontrado");
+    public String consultarNombreProducto(Producto p){
+       return p.getNombre();
     }
-    public float consultarPrecioProducto(int id){
-        for (Producto p:productos) {
-            if (p.getId()==id) {
-                return (p.getPrecio());
-            }
-        }
-        return 0;
+    public float consultarPrecioProducto(Producto p){
+        return p.getPrecio();
     }
 
     public float consultarCantidadProducto(Producto p){
@@ -69,12 +59,14 @@ public class DispensadorMecato {
         return false;
     }
 
-    public void consultarTotalUnidades(){
+    public List<String> consultarTotalUnidades(){
+        List<String> totales=new ArrayList<>();
         for(Producto p:productos){
-            System.out.println(p.getNombre()+": "+ p.getCantidad());
+            totales.add(p.getNombre()+": "+ p.getCantidad());
         }
+        return totales;
     }
-    public void consultarAgotados(){
+    public List<Producto> consultarAgotados(){
         List<Producto> agotados=new ArrayList<>();
 
         for(Producto p:productos){
@@ -82,10 +74,7 @@ public class DispensadorMecato {
                 agotados.add(p);
             }
         }
-        System.out.println("Productos agotados: ");
-        for(Producto p:agotados){
-            System.out.println(p);
-        }
+        return agotados;
     }
 
     public boolean surtir(Producto p, int cantidad){
