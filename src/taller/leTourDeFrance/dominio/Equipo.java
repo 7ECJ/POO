@@ -3,7 +3,8 @@ package taller.leTourDeFrance.dominio;
 import java.util.ArrayList;
 import java.util.List;
 
-class Equipo {
+public class Equipo
+{
     private int id;
     private String nombre;
     private List<Corredor> corredores;
