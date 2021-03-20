@@ -58,7 +58,7 @@ public class Tour {
             }
         }
         Collections.sort(puntuaciones);
-        for(int i=0;i<10 && i<mejoresPuntuaciones.size();i++){
+        for(int i=puntuaciones.size();mejoresPuntuaciones.size()<=10;i--){
             mejoresPuntuaciones.add(puntuaciones.get(i));
         }
         return mejoresPuntuaciones;
