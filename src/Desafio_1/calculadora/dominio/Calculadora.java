@@ -11,7 +11,7 @@ public class Calculadora {
         return a*b;
 
     }
-    public static double dividir(double a, double b){
-        return a/b;
+    public static Double dividir(double a, double b){
+            return a/b;
     }
 }
