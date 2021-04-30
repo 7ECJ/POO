@@ -4,6 +4,7 @@ public class PiedraPapelTijeras {
     public static int puntosYo=0;
     public static int puntosPc=0;
     public static int empates=0;
+    public static String resultado;
     public static final int PIEDRA=0;
     public static final int PAPEL=1;
     public static final int TIJERAS=2;
@@ -21,30 +22,39 @@ public class PiedraPapelTijeras {
 
         if(opcionPc==PIEDRA && opcionUsuario==PIEDRA){
             empates+=1;
+            resultado="Empate";
         }
         if(opcionPc==PIEDRA && opcionUsuario==PAPEL){
             puntosYo+=1;
+            resultado="TU";
         }
         if(opcionPc==PIEDRA && opcionUsuario==TIJERAS){
            puntosPc+=1;
+           resultado="PC";
         }
         if(opcionPc==PAPEL && opcionUsuario==PIEDRA){
             puntosPc+=1;
+            resultado="PC";
         }
         if(opcionPc==PAPEL && opcionUsuario==PAPEL){
             empates+=1;
+            resultado="Empate";
         }
         if(opcionPc==PAPEL && opcionUsuario==TIJERAS){
             puntosYo+=1;
+            resultado="TU";
         }
         if(opcionPc==TIJERAS && opcionUsuario==PIEDRA){
             puntosYo+=1;
+            resultado="TU";
         }
         if(opcionPc==TIJERAS && opcionUsuario==PAPEL){
             puntosYo+=1;
+            resultado="TU";
         }
         if(opcionPc==TIJERAS && opcionUsuario==TIJERAS){
             empates+=1;
+            resultado="Empate";
         }
     }
     public static String mostrarResultados(){

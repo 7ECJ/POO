@@ -21,18 +21,44 @@ public class Juego {
             case 1:{
                 int optUser=0;
                 int opcionPc=(int)Math.round(Math.random()* 2);
+                String optPc;
                 Object opcionUsuario=JOptionPane.showInputDialog(null,"¡A Jugar! Selecciona una de las siguientes opciones: ", "Elegir",JOptionPane.QUESTION_MESSAGE,null,OPCIONES, OPCIONES[0]);
+                switch ((String) opcionUsuario){
+                    case "Piedra":{
+                        optUser=0;
+                    break;}
+                    case "Papel":{
+                        optUser=1;
+                        break;
+                    }
+                    case "Tijeras":{
+                        optUser=2;
+                        break;
+                    }
+                    default:{
 
-                if(opcionUsuario=="Piedra"){
-                    optUser=0;
+                    }
                 }
-                if(opcionUsuario=="Papel"){
-                    optUser=1;
+                switch (opcionPc){
+                    case 0:{
+                        optPc="Piedra";
+                        break;
+                    }
+                    case 1:{
+                        optPc="Papel";
+                        break;
+                    }
+                    case 2:{
+                        optPc="Tijeras";
+                        break;
+                    }
+                    default:{
+                        optPc="Nada";
+                        break;
+                    }
                 }
-                if(opcionUsuario=="Tijeras"){
-                    optUser=2;
-                };
                 PiedraPapelTijeras.jugar(optUser, opcionPc);
+                mostrarMensaje("Tu seleccionaste: "+ opcionUsuario +"\n El PC seleccionó: "+ optPc+"\n El resultado es: "+ PiedraPapelTijeras.resultado);
                 break;
             }
             case 2:{
