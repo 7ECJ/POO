@@ -9,19 +9,21 @@ public class Vendedor extends Directo{
     }
 
     public long calcularComision(){
-        return 0;
+        long comision=0;
+        if(ventasDelMes<=999999){
+            comision+=ventasDelMes*0.05;
+        }
+        else{
+            comision+=ventasDelMes*0.045;
+        }
+        return comision;
     }
 
     @Override
     protected long calcularSalario() {
-        long salario=getSalario();
-        if(ventasDelMes<=999999){
-            salario+=ventasDelMes*0.05;
-        }
-        else{
-            salario+=ventasDelMes*0.045;
-        }
-        salario-=calcularSalud()-calcularPension();
-        return salario;
+        long sal=getSalario();
+        sal+=calcularComision();
+        sal-=calcularSalud()-calcularPension();
+        return sal;
     }
 }

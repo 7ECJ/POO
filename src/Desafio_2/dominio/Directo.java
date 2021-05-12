@@ -15,8 +15,9 @@ public class Directo extends Empleado{
 
     @Override
     protected long calcularSalario() {
-        salario-=(calcularSalud()+calcularPension());
-        return salario;
+        long sal=salario;
+        sal-=(calcularSalud()+calcularPension());
+        return sal;
     }
 
     public long getSalario() {
