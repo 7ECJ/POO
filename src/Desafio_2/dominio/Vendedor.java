@@ -23,7 +23,7 @@ public class Vendedor extends Directo{
     protected long calcularSalario() {
         long sal=getSalario();
         sal+=calcularComision();
-        sal-=calcularSalud()-calcularPension();
+        sal-=(calcularSalud()+calcularPension());
         return sal;
     }
 }
