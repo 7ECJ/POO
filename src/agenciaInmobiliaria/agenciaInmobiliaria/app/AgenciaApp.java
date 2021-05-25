@@ -5,11 +5,9 @@ import agenciaInmobiliaria.dominio.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class AgenciaApp {
     public static void main(String[] args) {
-        Scanner scan=new Scanner(System.in);
         boolean activo=true;
         Agencia cristal=new Agencia();
         cristal.setNombre("Cristal Soluciones Inmobiliarias");
@@ -27,7 +25,7 @@ public class AgenciaApp {
         List <Inmueble> in= Arrays.asList(primera,
                 segundo,
                 tercero);
-        cristal.setInmuebles(in);
+        in.forEach(i->cristal.agregarInmueble(i));
         /*Tendria que dar true*/
         System.out.println(cristal.arrendar(primera));
         /*Tendria que dar false*/
